@@ -1,0 +1,18 @@
+@import "variables";
+
+
+
+//Calculating columns
+
+@mixin setColumns( $num_cols, $spacing, $width:100%  ){
+  
+  width: ( $width - ( $spacing * ($num_cols - 1) ) ) / $num_cols;
+  margin-left: $spacing;
+  float: left;
+  // Remove Spacing from First Child
+  &:first-child{
+    margin-left: 0;
+  }
+  
+}
+
